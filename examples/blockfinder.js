@@ -37,7 +37,7 @@ bot.on('chat', async (username, message) => {
     const ids = [mcData.blocksByName[name].id]
 
     const startTime = performance.now()
-    const blocks = bot.findBlocks({ matching: ids, maxDistance: 128, count: 10 })
+    const blocks = bot.findBlocks({ matching: ids, maxDistance: 128, count: 500 })
     const time = (performance.now() - startTime).toFixed(2)
 
     bot.chat(`I found ${blocks.length} ${name} blocks in ${time} ms`)
